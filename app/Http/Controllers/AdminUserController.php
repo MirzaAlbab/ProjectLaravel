@@ -13,7 +13,8 @@ class AdminUserController extends Controller
      */
     public function index()
     {
-        return view('admin.users');
+        $User = \App\Models\User::all();
+        return view('admin.users',['user'=> $User]);
     }
 
     /**

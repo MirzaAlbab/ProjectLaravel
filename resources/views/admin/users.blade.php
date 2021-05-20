@@ -88,6 +88,7 @@
           </div>
         </div>
         <table class="table table-striped table-bordered text-center">
+        
           <thead>
             <tr>
               <th scope="col">No</th>
@@ -99,36 +100,17 @@
             </tr>
           </thead>
           <tbody>
+          @foreach($user as $us)
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>L</td>
+              <th scope="row">{{$loop->iteration}}</th>
+              <td>{{$us->Nama}}</td>
+              <td>{{$us->Gender}}</td>
+              <td>{{$us->Email}}</td>
               <td><a href="" class="btn btn-info">Detail</a></td>
               <td><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td>
               <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded"></i></td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>L</td>
-              <td><a href="" class="btn btn-info">Detail</a></td>
-              <td><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td>
-              <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded"></i></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>L</td>
-              <td><a href="" class="btn btn-info">Detail</a></td>
-              <td><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td>
-              <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded"></i></td>
-            </tr>
+          @endforeach
             
           </tbody>
         </table>

@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #F6F8FC;
+    box-sizing: border-box;
+}
+.card a{
+    text-decoration:none;
+}
+.kotak1{
+    background-color: #17A2B8;
+    color: #fff;
+}
+.kotak2{
+    background-color:#28A745;
+    color: #fff;
+}
+.kotak3{
+    background-color:#FFC107;
+    color: #fff;
+}
+.kotak4{
+    background-color:#DC3545;
+    color: #fff;
+}
+.display-4{
+    font-weight: bold;
+}
+.card-body-icon{
+    position: absolute;
+    z-index: 0;
+    font-size: 90px;
+    top: 25px;
+    right: 4px;
+    opacity: 0.5;
+}
+.d-flex{
+    justify-content: space-around;
+}
+.navbar-brand{
+    color:#000;
+    font-family: 'Viga', sans-serif;
+    font-size: 25px;
+}
+.nav-link{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:20px;
+}
+.nav-link:hover{
+    background-color: #acacac;
+    border-radius: 5px;
+}
+.navbar{
+    background-color: #fff;
+    padding-left: 30px;
+    box-shadow: 0px 2px 5px rgba(103,104,105,.5);
+}
+.sidebar{
+    background-color: #373a3d;
+}

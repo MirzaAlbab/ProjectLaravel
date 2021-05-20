@@ -1,0 +1,51 @@
+.artikel{
+    margin-top: 3%;
+    border-radius: 20px;
+
+}
+.story{
+    margin-top: 5%;
+    border-radius: 20px;
+}
+
+.container h1,h2{
+    text-transform: uppercase;
+    font-family:'Keep Calm','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.log{
+    margin-top: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.covid{
+    margin-top: 20%;
+}
+.form-label{
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.tombolsub{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-radius: 15px !important;
+    text-decoration: none !important;
+    font-family: 'Roboto';
+    
+}
+.sub{
+    text-decoration: none;
+}
+.form-control{
+    border-radius: 10px;
+}
+@media (max-width: 576px) {
+    .title{
+        font-size: 18px;
+    }
+    .form-label{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+}

@@ -14,7 +14,7 @@ class AdminUserController extends Controller
     public function index()
     {
         $User = \App\Models\User::all();
-        return view('admin.users',['user'=> $User]);
+        return view('admin.user.users',['user'=> $User]);
     }
 
     /**
@@ -24,7 +24,7 @@ class AdminUserController extends Controller
      */
     public function create()
     {
-        return view('admin.users#user');
+        return view('admin.user.tambahusers');
     }
 
     /**
@@ -35,8 +35,26 @@ class AdminUserController extends Controller
      */
     public function store(Request $request)
     {
-        User::create($request->all());
-        return redirect('/user')->with('status', 'data berhasil');
+        $request->validate([
+            'NAMA' => 'required',
+            'EMAIL' => 'required',
+            'TANGGAL_LAHIR' => 'required',
+            'PASSWORD' => 'required',
+            'CONFIRMPASSWORD' => 'required',
+            'ALAMAT' => 'required',
+            'NO_TELP' => 'required',
+            'JENIS_KELAMIN' => 'required',
+        ]);
+        $User = new User;
+        $User->NAMA = $request->input('NAMA');
+        $User->TANGGAL_LAHIR = $request->input('TANGGAL_LAHIR');
+        $User->EMAIL = $request->input('EMAIL');
+        $User->NO_TELP = $request->input('NO_TELP');
+        $User->ALAMAT = $request->input('ALAMAT');
+        $User->JENIS_KELAMIN = $request->input('JENIS_KELAMIN');
+        $User->PASSWORD = bcrypt($request->input('PASSWORD'));
+        $User->save();
+        return redirect('/user')->with('status', 'Data User Berhasil Ditambahkan');
 
     }
 
@@ -46,9 +64,9 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('admin.user.detailuser', compact('user'));
     }
 
     /**
@@ -57,9 +75,10 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        
+        return view('admin.user.edituser', ['user' => $user]);
     }
 
     /**
@@ -69,9 +88,17 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        User::where('ID_PASIEN', $user->ID_PASIEN)
+                ->update([
+                    'NAMA' => $request->NAMA,
+                    'TANGGAL_LAHIR' => $request->TANGGAL_LAHIR,
+                    'EMAIL' => $request->EMAIL,
+                    'NO_TELP' => $request->NO_TELP,
+                    'ALAMAT' => $request->ALAMAT,
+                ]);
+        return redirect('/user')->with('status', 'Data User Berhasil Diubah');
     }
 
     /**
@@ -80,8 +107,10 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        User::destroy($user->ID_PASIEN);
+        return redirect('/user')->with('status', 'Data User Berhasil Dihapus');
+
     }
 }

@@ -28,9 +28,14 @@ Route::get('/payment',[PaymentController::class,'index']);
 Route::get('/spotlight',[SpotlightController::class,'index']);
 Route::get('/story',[StoryController::class,'index']);
 Route::get('/admin',[AdminIndexController::class,'dashboard']);
-Route::post('/user/create',[AdminUserController::class,'create']);
-Route::post('/user',[AdminUserController::class,'store']);
-Route::get('/user',[AdminUserController::class,'index']);
-Route::get('/doctor',[AdminDoctorController::class,'index']);
+// Route::get('/user',[AdminUserController::class,'index']);
+// Route::post('/user/create',[AdminUserController::class,'create']);
+// Route::post('/user',[AdminUserController::class,'store']);
+// Route::get('/user/{user}',[AdminUserController::class,'show']);
+// Route::delete('/user/{user}',[AdminUserController::class,'destroy']);
+// Route::patch('/user/{user}/edit',[AdminUserController::class,'edit']);
+// Route::patch('/user/{user}',[AdminUserController::class,'update']);
+Route::resource('user', AdminUserController::class);
+Route::resource('doctor', AdminDoctorController::class);
 Route::get('/article',[AdminArticleController::class,'index']);
 

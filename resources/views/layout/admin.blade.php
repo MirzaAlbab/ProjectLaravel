@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Ubuntu&display=swap');
     </style>
     <!-- My CSS -->
     <link rel="stylesheet" href="../css/styleadmin.css">

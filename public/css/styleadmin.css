@@ -4,6 +4,7 @@
 body{
     background-color: #F6F8FC;
     box-sizing: border-box;
+    font-family: 'Ubuntu','Oswald', sans-serif;;
 }
 .card a{
     text-decoration:none;

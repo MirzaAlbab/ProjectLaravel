@@ -28,9 +28,9 @@
           @foreach($doctor as $doc)
             <tr>
               <th scope="row">{{$loop->iteration}}</th>
-              <td>{{$doc->NAMA}}</td>
-              <td>{{$doc->JENIS_KELAMIN}}</td>
-              <td>{{$doc->SPESIALISASI}}</td>
+              <td>{{$doc->nama}}</td>
+              <td>{{$doc->gender}}</td>
+              <td>{{$doc->spesialisasi}}</td>
               <td><a href="{{ route('doctor.show',$doc->ID_DOKTER) }}" class="btn btn-info">Detail</a></td>
               <td><a href="{{ route('doctor.edit',$doc->ID_DOKTER) }}" class="btn  btn-sm bg-success" ><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td></a>
               <form action="{{ route('doctor.destroy',$doc->ID_DOKTER) }}" method="post">

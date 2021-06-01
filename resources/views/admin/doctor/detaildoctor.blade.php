@@ -10,7 +10,7 @@
 				<h5>Id</h5>            
 			</div>
 			<div class="col-sm-5">
-			 	: {{$doctor->ID_DOKTER}}
+			 	: {{$doctor->id_dokter}}
 			</div>
 		</div>
 		<div class="row">
@@ -18,15 +18,15 @@
 				<h5>Nama</h5>            
 			</div>
 			<div class="col-sm-5">
-            : {{$doctor->NAMA}}
+            : {{$doctor->nama}}
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-2">
-				<h5>Gender</h5>            
+				<h5>gender</h5>            
 			</div>
 			<div class="col-sm-5">
-            : {{$doctor->JENIS_KELAMIN}}
+            : {{$doctor->jenis_kelamin}}
 			</div>
 		</div>
 		<div class="row">
@@ -34,7 +34,7 @@
 				<h5>Email</h5>            
 			</div>
 			<div class="col-sm-5">
-            : {{$doctor->EMAIL}}
+            : {{$doctor->email}}
 			</div>
 		</div>
 		<div class="row">
@@ -42,7 +42,7 @@
 				<h5>Spesialisasi</h5>            
 			</div>
 			<div class="col-sm-5">
-				: {{$doctor->SPESIALISASI}}
+				: {{$doctor->spesialisasi}}
 			</div>
 		</div>
 		<div class="row">
@@ -50,7 +50,7 @@
 				<h5>No_Telepon</h5>            
 			</div>
 			<div class="col-sm-5">
-				: {{$doctor->NO_TELP}}
+				: {{$doctor->telp}}
 			</div>
 		</div>
         

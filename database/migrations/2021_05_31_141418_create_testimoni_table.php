@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTestimoniTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('testimoni', function (Blueprint $table) {
+            $table->date('tanggal');
+            $table->decimal('rate_dokter');
+            $table->string('komentar');
+            // $table->unsignedBigInteger('id_pasien');
+            // $table->unsignedBigInteger('id_dokter');
+            $table->foreignId('id_users')->constrained('users');
+            $table->foreignId('id_dokter')->constrained('dokter');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('testimoni');
+    }
+}

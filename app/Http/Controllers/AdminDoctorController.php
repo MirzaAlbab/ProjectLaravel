@@ -36,20 +36,20 @@ class AdminDoctorController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'NAMA' => 'required',
-            'EMAIL' => 'required',
-            'PASSWORD' => 'required',
-            'CONFIRMPASSWORD' => 'required',
-            'NO_TELP' => 'required',
-            'JENIS_KELAMIN' => 'required',
+            'nama' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'password_confirmation' => 'required',
+            'telp' => 'required',
+            'jenis_kelamin' => 'required',
         ]);
         $Doctor = new Doctor;
-        $Doctor->NAMA = $request->input('NAMA');
-        $Doctor->JENIS_KELAMIN = $request->input('JENIS_KELAMIN');
-        $Doctor->EMAIL = $request->input('EMAIL');
-        $Doctor->NO_TELP = $request->input('NO_TELP');
-        $Doctor->SPESIALISASI = $request->input('SPESIALISASI');
-        $Doctor->PASSWORD = bcrypt($request->input('PASSWORD'));
+        $Doctor->nama = $request->input('nama');
+        $Doctor->jenis_kelamin = $request->input('gender');
+        $Doctor->email = $request->input('email');
+        $Doctor->telp = $request->input('telp');
+        $Doctor->spesialisasi = $request->input('spesialisasi');
+        $Doctor->password = bcrypt($request->input('password'));
         $Doctor->save();
         return redirect('/doctor')->with('status', 'Data Dokter Berhasil Ditambahkan');
 
@@ -87,12 +87,12 @@ class AdminDoctorController extends Controller
      */
     public function update(Request $request, Doctor $doctor)
     {
-        Doctor::where('ID_DOKTER', $doctor->ID_DOKTER)
+        Doctor::where('id_dokter', $doctor->id)
                 ->update([
-                    'NAMA' => $request->NAMA,
-                    'EMAIL' => $request->EMAIL,
-                    'NO_TELP' => $request->NO_TELP,
-                    'SPESIALISASI' => $request->SPESIALISASI,
+                    'nama' => $request->nama,
+                    'email' => $request->email,
+                    'telp' => $request->telp,
+                    'spesialisasi' => $request->spesialisasi,
                 ]);
         return redirect('/doctor')->with('status', 'Data Dokter Berhasil Diubah');
     }
@@ -105,7 +105,7 @@ class AdminDoctorController extends Controller
      */
     public function destroy(Doctor $doctor)
     {
-        Doctor::destroy($doctor->ID_DOKTER);
+        Doctor::destroy($doctor->id);
         return redirect('/doctor')->with('status', 'Data Dokter Berhasil Dihapus');
 
     }

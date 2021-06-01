@@ -10,7 +10,7 @@
 				<h5>Id</h5>            
 			</div>
 			<div class="col-sm-5">
-			 	: {{$user->ID_PASIEN}}
+			 	: {{$user->id_pasien}}
 			</div>
 		</div>
 		<div class="row">
@@ -18,7 +18,7 @@
 				<h5>Nama</h5>            
 			</div>
 			<div class="col-sm-5">
-            : {{$user->NAMA}}
+            : {{$user->nama}}
 			</div>
 		</div>
 		<div class="row">
@@ -26,7 +26,7 @@
 				<h5>Gender</h5>            
 			</div>
 			<div class="col-sm-5">
-            : {{$user->JENIS_KELAMIN}}
+            : {{$user->gender}}
 			</div>
 		</div>
 		<div class="row">
@@ -34,7 +34,7 @@
 				<h5>Email</h5>            
 			</div>
 			<div class="col-sm-5">
-            : {{$user->EMAIL}}
+            : {{$user->email}}
 			</div>
 		</div>
 		<div class="row">
@@ -42,7 +42,7 @@
 				<h5>Tanggal Lahir</h5>            
 			</div>
 			<div class="col-sm-5">
-				: {{$user->TANGGAL_LAHIR}}
+				: {{$user->tanggal_lahir}}
 			</div>
 		</div>
 		<div class="row">
@@ -50,7 +50,7 @@
 				<h5>Alamat</h5>            
 			</div>
 			<div class="col-sm-5">
-				: {{$user->ALAMAT}}
+				: {{$user->alamat}}
 			</div>
 		</div>
 		<div class="row">
@@ -58,7 +58,7 @@
 				<h5>No_Telepon</h5>            
 			</div>
 			<div class="col-sm-5">
-				: {{$user->NO_TELP}}
+				: {{$user->telp}}
 			</div>
 		</div>
         

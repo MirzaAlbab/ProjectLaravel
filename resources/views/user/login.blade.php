@@ -9,14 +9,20 @@
         </div>
         <div class="container">
           <h1 class="text-center">Log in</h1>
-          <form method="post" class="log mt-4">
+          <form method="post" class="log mt-4" action="{{ route('login') }}">
+            @csrf
               <div class="row justify-content-center">
                   <div class="col">
                       <label for="E-mail" class="form-label">E-mail</label>
                       <div class="input-icon">
-                        <input type="email" id="E-mail" class="form-control form-control-sm" placeholder="E-mail">
+                        <input type="email" id="E-mail" class="form-control form-control-sm @error('EMAIL') is-invalid @enderror" placeholder="E-mail" name="email">
                         <i class="fas fa-envelope"></i>
                       </div>
+                                @error('EMAIL')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 
                   </div>
               </div>
@@ -24,9 +30,14 @@
                   <div class="col">
                       <label for="password" class="form-label">Password</label>
                       <div class="input-icon">
-                        <input type="password" id="password" class="form-control form-control-sm" placeholder='Password' name="password">
+                        <input type="password" id="password" class="form-control form-control-sm @error('PASSWORD') is-invalid @enderror" placeholder='Password' name="password">
                         <i class="fas fa-key"></i>
                       </div>
+                                @error('PASSWORD')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                       
                   </div>
               </div>
@@ -49,7 +60,7 @@
           </form>
           <div class="row justify-content-center">
               <div class="col">
-                  <h5 class="klarifikasi log">Don't have an account? <a href="registeruser.html">Sign Up</a></h5>
+                  <h5 class="klarifikasi log">Don't have an account? <a href="/register">Sign Up</a></h5>
               </div>
           </div>
         </div>

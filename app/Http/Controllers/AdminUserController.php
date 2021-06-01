@@ -36,23 +36,23 @@ class AdminUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'NAMA' => 'required',
-            'EMAIL' => 'required',
-            'TANGGAL_LAHIR' => 'required',
-            'PASSWORD' => 'required',
-            'CONFIRMPASSWORD' => 'required',
-            'ALAMAT' => 'required',
-            'NO_TELP' => 'required',
-            'JENIS_KELAMIN' => 'required',
+            'nama' => 'required',
+            'email' => 'required',
+            'tanggal_lahir' => 'required',
+            'password' => 'required',
+            'confirmpassword' => 'required',
+            'alamat' => 'required',
+            'telp' => 'required',
+            'gender' => 'required',
         ]);
         $User = new User;
-        $User->NAMA = $request->input('NAMA');
-        $User->TANGGAL_LAHIR = $request->input('TANGGAL_LAHIR');
-        $User->EMAIL = $request->input('EMAIL');
-        $User->NO_TELP = $request->input('NO_TELP');
-        $User->ALAMAT = $request->input('ALAMAT');
-        $User->JENIS_KELAMIN = $request->input('JENIS_KELAMIN');
-        $User->PASSWORD = bcrypt($request->input('PASSWORD'));
+        $User->nama = $request->input('nama');
+        $User->tanggal_lahir = $request->input('tanggal_lahir');
+        $User->email = $request->input('email');
+        $User->telp = $request->input('telp');
+        $User->alamat = $request->input('alamat');
+        $User->gender = $request->input('gender');
+        $User->password = bcrypt($request->input('password'));
         $User->save();
         return redirect('/user')->with('status', 'Data User Berhasil Ditambahkan');
 
@@ -90,13 +90,13 @@ class AdminUserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        User::where('ID_PASIEN', $user->ID_PASIEN)
+        User::where('id_pasien', $user->id)
                 ->update([
-                    'NAMA' => $request->NAMA,
-                    'TANGGAL_LAHIR' => $request->TANGGAL_LAHIR,
-                    'EMAIL' => $request->EMAIL,
-                    'NO_TELP' => $request->NO_TELP,
-                    'ALAMAT' => $request->ALAMAT,
+                    'nama' => $request->nama,
+                    'tanggal_lahir' => $request->tanggal_lahir,
+                    'email' => $request->email,
+                    'telp' => $request->telp,
+                    'alamat' => $request->alamat,
                 ]);
         return redirect('/user')->with('status', 'Data User Berhasil Diubah');
     }
@@ -109,7 +109,7 @@ class AdminUserController extends Controller
      */
     public function destroy(User $user)
     {
-        User::destroy($user->ID_PASIEN);
+        User::destroy($user->id);
         return redirect('/user')->with('status', 'Data User Berhasil Dihapus');
 
     }

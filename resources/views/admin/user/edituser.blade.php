@@ -13,12 +13,12 @@
             
                 <div class="col">
                     <label for="namalengkap" class="form-label">Nama Lengkap</label>
-                    <input type="text" id="namalengkap" name="NAMA" class="form-control form-control-sm" placeholder="Nama Lengkap" value="{{$user->NAMA}}" >
+                    <input type="text" id="namalengkap" name="nama" class="form-control form-control-sm" placeholder="Nama Lengkap" value="{{$user->nama}}" >
                     
                 </div>
                 <div class="col">
                     <label for="TanggalLahir" class="form-label">Tanggal Lahir</label>
-                    <input type="date" id="TanggalLahir" name="TANGGAL_LAHIR" class="form-control form-control-sm" placeholder="DD/MM/YY" name="TanggalLahir" value="{{$user->TANGGAL_LAHIR}}" >
+                    <input type="date" id="TanggalLahir" name="tanggal_lahir" class="form-control form-control-sm" placeholder="DD/MM/YY" name="TanggalLahir" value="{{$user->tanggal_lahir}}" >
                     
                 </div>
             </div>
@@ -26,18 +26,18 @@
             <div class="row justify-content-center">
                 <div class="col">
                     <label for="E-mail" class="form-label">E-mail</label>
-                    <input type="email" id="E-mail" name="EMAIL" class="form-control form-control-sm" placeholder="E-mail" value="{{$user->EMAIL}}">
+                    <input type="email" id="E-mail" name="email" class="form-control form-control-sm" placeholder="E-mail" value="{{$user->email}}">
                 </div>
                 <div class="col">
                     <label for="NomorTelepon" class="form-label">Nomor Telepon</label>
-                    <input type="tel" id="NomorTelepon" name="NO_TELP" class="form-control form-control-sm" placeholder="Nomor Telepon"  value="{{$user->NO_TELP}}" >
+                    <input type="tel" id="NomorTelepon" name="telp" class="form-control form-control-sm" placeholder="Nomor Telepon"  value="{{$user->telp}}" >
                     
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col">
                     <label for="Alamat" class="form-label">Alamat</label>
-                    <input type="text" id="Alamat" name="ALAMAT" class="form-control form-control-sm" placeholder="Alamat" value="{{$user->ALAMAT}}">
+                    <input type="text" id="Alamat" name="alamat" class="form-control form-control-sm" placeholder="Alamat" value="{{$user->alamat}}">
                    
                 </div>
             </div>

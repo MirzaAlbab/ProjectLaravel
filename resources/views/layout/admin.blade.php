@@ -23,15 +23,48 @@
   <body>
     <nav class="navbar fixed-top navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Admin Covers</a>
+        <a class="navbar-brand" href="/">Selamat datang Admin</a>
         
-        <div class="icon d-flex justify-content-end">
+        <!-- <div class="icon d-flex justify-content-end">
           <h5>
             <i class="fas fa-envelope me-3" data-toggle="tooltip" title="Inbox"></i>
             <i class="fas fa-bell me-3" data-toggle="tooltip" title="Notification"></i>
-            <i class="fas fa-sign-out-alt me-3" data-toggle="tooltip" title="Sign Out"></i>
           </h5>
         </div>
+      </div> -->
+      <div>
+        @guest
+            @if (Route::has('login'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{('Login') }}</a>
+                </li>
+            @endif
+
+            @if (Route::has('register'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{('Register') }}</a>
+                </li>
+            @endif
+          
+        @else
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->nama }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                        {{('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+        @endguest
       </div>
     </nav>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,4 +114,4 @@
       </div>
       @yield('container')
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>

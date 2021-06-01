@@ -11,25 +11,25 @@
             <div class="row justify-content-center">
                 <div class="col">
                     <label for="namalengkap" class="form-label">Nama Lengkap</label>
-                    <input type="text" id="namalengkap" name="NAMA" class="form-control form-control-sm" placeholder="Nama Lengkap" value="{{$doctor->NAMA}}" >
+                    <input type="text" id="namalengkap" name="nama" class="form-control form-control-sm" placeholder="Nama Lengkap" value="{{$doctor->nama}}" >
                 </div>
             </div>
             
             <div class="row justify-content-center">
                 <div class="col">
                     <label for="E-mail" class="form-label">E-mail</label>
-                    <input type="email" id="E-mail" name="EMAIL" class="form-control form-control-sm" placeholder="E-mail" value="{{$doctor->EMAIL}}">
+                    <input type="email" id="E-mail" name="email" class="form-control form-control-sm" placeholder="E-mail" value="{{$doctor->email}}">
                 </div>
                 <div class="col">
                     <label for="NomorTelepon" class="form-label">Nomor Telepon</label>
-                    <input type="tel" id="NomorTelepon" name="NO_TELP" class="form-control form-control-sm" placeholder="Nomor Telepon"  value="{{$doctor->NO_TELP}}" >
+                    <input type="tel" id="NomorTelepon" name="telp" class="form-control form-control-sm" placeholder="Nomor Telepon"  value="{{$doctor->telp}}" >
                     
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col">
                     <label for="Spesialisasi" class="form-label">Spesialisasi</label>
-                    <input type="text" id="Spesialisasi" name="SPESIALISASI" class="form-control form-control-sm" placeholder="Spesialisasi" value="{{$doctor->SPESIALISASI}}">
+                    <input type="text" id="Spesialisasi" name="spesialisasi" class="form-control form-control-sm" placeholder="Spesialisasi" value="{{$doctor->spesialisasi}}">
                 </div>
             </div>
            

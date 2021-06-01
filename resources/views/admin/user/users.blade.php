@@ -27,9 +27,9 @@
           @foreach($user as $us)
             <tr>
               <th scope="row">{{$loop->iteration}}</th>
-              <td>{{$us->NAMA}}</td>
-              <td>{{$us->JENIS_KELAMIN}}</td>
-              <td>{{$us->EMAIL}}</td>
+              <td>{{$us->nama}}</td>
+              <td>{{$us->gender}}</td>
+              <td>{{$us->email}}</td>
               <td><a href="{{ route('user.show',$us->ID_PASIEN) }}" class="btn btn-info">Detail</a></td>
               <td><a href="{{ route('user.edit',$us->ID_PASIEN) }}" class="btn  btn-sm bg-success" ><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td></a>
               <form action="{{ route('user.destroy',$us->ID_PASIEN) }}" method="post">

@@ -15,7 +15,7 @@
                   <div class="col">
                       <label for="E-mail" class="form-label">E-mail</label>
                       <div class="input-icon">
-                        <input type="email" id="E-mail" class="form-control form-control-sm @error('EMAIL') is-invalid @enderror" placeholder="E-mail" name="email">
+                        <input type="email" id="E-mail" class="form-control form-control-sm @error('email') is-invalid @enderror" placeholder="E-mail" name="email">
                         <i class="fas fa-envelope"></i>
                       </div>
                                 @error('EMAIL')
@@ -30,7 +30,7 @@
                   <div class="col">
                       <label for="password" class="form-label">Password</label>
                       <div class="input-icon">
-                        <input type="password" id="password" class="form-control form-control-sm @error('PASSWORD') is-invalid @enderror" placeholder='Password' name="password">
+                        <input type="password" id="password" class="form-control form-control-sm @error('password') is-invalid @enderror" placeholder='Password' name="password">
                         <i class="fas fa-key"></i>
                       </div>
                                 @error('PASSWORD')

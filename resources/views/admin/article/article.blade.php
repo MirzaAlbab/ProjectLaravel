@@ -14,30 +14,29 @@
               </div>
               <div class="modal-body">
                 <form method="post" class="log">
-                  <div class="row justify-content-center">
+                  <!-- <div class="row justify-content-center">
                       <div class="col">
                           <label for="penulis" class="form-label">Penulis</label>
                           <input type="text" id="penulis" class="form-control form-control-sm" placeholder="Penulis">
                       </div>
-                    
-                  </div>
+                  </div> -->
 
                   <div class="row justify-content-center">
                       <div class="col">
                           <label for="judul" class="form-label">Judul Artikel</label>
-                          <input type="text" id="judul" class="form-control form-control-sm" placeholder="Judul Artikel">
+                          <input type="text" id="judul" class="form-control form-control-sm" placeholder="Judul Artikel" name="judul">
                       </div>
                   </div>
                   <div class="row justify-content-center">
                     <div class="col">
-                        <label for="link" class="form-label">Link</label>
-                        <input type="text" id="link" class="form-control form-control-sm" placeholder="Link">
+                        <label for="konten" class="form-label">konten</label>
+                        <input type="text" id="konten" class="form-control form-control-sm" placeholder="Link" name="konten">
                     </div>
                 </div>
                 <div class="row justify-content-center">
                   <div class="col">
                       <label for="tag" class="form-label">Tag Artikel</label>
-                      <input type="text" id="tag" class="form-control form-control-sm" placeholder="Tag">
+                      <input type="text" id="tag" class="form-control form-control-sm" placeholder="Tag" name="tag">
                   </div>
               </div>
               </form>
@@ -72,26 +71,7 @@
               <td><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td>
               <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded"></i></td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>L</td>
-              <td><a href="" class="btn btn-info">Detail</a></td>
-              <td><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td>
-              <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded"></i></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>L</td>
-              <td><a href="" class="btn btn-info">Detail</a></td>
-              <td><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td>
-              <td><i class="fas fa-trash-alt bg-danger p-2 text-white rounded"></i></td>
-            </tr>
+            
             
           </tbody>
         </table>

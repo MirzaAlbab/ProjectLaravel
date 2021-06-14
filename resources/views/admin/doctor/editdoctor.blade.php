@@ -5,7 +5,7 @@
 @section('container')
 <div class="col-md-10 pt-5 p-5">
 <h3><i class="fas fa-user-md me-2"></i>EDIT DOKTER</h3><hr>
-	<form method="post" class="log" action="{{ route('doctor.update',$doctor->ID_DOKTER) }}">
+	<form method="post" class="log" action="{{ route('doctor.update',$doctor->id) }}">
             @method('patch')
             @csrf
             <div class="row justify-content-center">
@@ -33,7 +33,7 @@
                 </div>
             </div>
            
-                <a href="/doctor" class="btn btn-secondary my-3">Kembali</a>
+                <a href="/admin/doctor" class="btn btn-secondary my-3">Kembali</a>
                 <button type="submit" class="btn btn-primary">Ubah Data</button>
     </form>
 </div>

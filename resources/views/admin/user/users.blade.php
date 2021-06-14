@@ -30,9 +30,9 @@
               <td>{{$us->nama}}</td>
               <td>{{$us->gender}}</td>
               <td>{{$us->email}}</td>
-              <td><a href="{{ route('user.show',$us->ID_PASIEN) }}" class="btn btn-info">Detail</a></td>
-              <td><a href="{{ route('user.edit',$us->ID_PASIEN) }}" class="btn  btn-sm bg-success" ><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td></a>
-              <form action="{{ route('user.destroy',$us->ID_PASIEN) }}" method="post">
+              <td><a href="{{ route('user.show',$us->id) }}" class="btn btn-info">Detail</a></td>
+              <td><a href="{{ route('user.edit',$us->id) }}" class="btn  btn-sm bg-success" ><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td></a>
+              <form action="{{ route('user.destroy',$us->id) }}" method="post">
               @csrf
               @method('delete')
               <td><button type="submit" class="btn btn-sm bg-danger"><i class="fas fa-trash-alt p-2 text-white rounded"></i></button></td>

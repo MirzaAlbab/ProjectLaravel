@@ -18,7 +18,7 @@ class CreateDokterTable extends Migration
             $table->string('nama');
             $table->char('gender');
             $table->string('email')->unique();
-            $table->integer('telp');
+            $table->string('telp');
             $table->string('spesialisasi');
             $table->string('password');
             $table->string('role')->default('dokter');

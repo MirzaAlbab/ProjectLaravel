@@ -6,7 +6,7 @@
 <div class="col-md-10 pt-5 p-5">
 <h3><i class="fas fa-users me-2"></i>EDIT USERS</h3><hr>
         <!-- Edit Form -->
-        <form method="post" class="log" action="{{ route('user.update',$user->ID_PASIEN) }}">
+        <form method="post" class="log" action="{{ route('user.update',$user->id) }}">
         @method('patch')
         @csrf
             <div class="row justify-content-center">
@@ -41,7 +41,7 @@
                    
                 </div>
             </div>
-                <a href="/user" class="btn btn-secondary my-3">Kembali</a>
+                <a href="/admin/user" class="btn btn-secondary my-3">Kembali</a>
                 <button type="submit" class="btn btn-primary">Ubah Data</button>
               </form>
               </div>

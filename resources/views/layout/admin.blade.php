@@ -23,49 +23,23 @@
   <body>
     <nav class="navbar fixed-top navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">Selamat datang Admin</a>
+        <a class="navbar-brand" href="/">Selamat datang {{Auth::user()->nama}}</a>
         
-        <!-- <div class="icon d-flex justify-content-end">
-          <h5>
-            <i class="fas fa-envelope me-3" data-toggle="tooltip" title="Inbox"></i>
-            <i class="fas fa-bell me-3" data-toggle="tooltip" title="Notification"></i>
-          </h5>
-        </div>
-      </div> -->
-      <div>
-        @guest
-            @if (Route::has('login'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{('Login') }}</a>
-                </li>
-            @endif
-
-            @if (Route::has('register'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{('Register') }}</a>
-                </li>
-            @endif
+        
           
-        @else
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->nama }}
-                </a>
-
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                      document.getElementById('logout-form').submit();">
-                        {{('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </li>
-        @endguest
+            <!-- <i class="fas fa-envelope me-3" data-toggle="tooltip" title="Inbox"></i>
+            <i class="fas fa-bell me-3" data-toggle="tooltip" title="Notification"></i> -->
+            <div class="icon">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+              @csrf         
+            <button type="submit" class="btn"><i class="fas fa-sign-out-alt fa-lg me-3" data-toggle="tooltip" title="Sign Out"></i></button>
+            </form>
+            </div>
+            
+          
+        
       </div>
+        
     </nav>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -89,13 +63,13 @@
             <a class="nav-link active text-white" aria-current="page" href="/admin"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a><hr class="bg-secondary">
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/user"><i class="fas fa-users me-2"></i>Users</a><hr class="bg-secondary">
+            <a class="nav-link text-white" href="/admin/user"><i class="fas fa-users me-2"></i>Users</a><hr class="bg-secondary">
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/doctor"><i class="fas fa-user-md me-2"></i>Doctors</a><hr class="bg-secondary">
+            <a class="nav-link text-white" href="/admin/doctor"><i class="fas fa-user-md me-2"></i>Doctors</a><hr class="bg-secondary">
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/article"><i class="fas fa-newspaper me-2"></i>Article</a><hr class="bg-secondary">
+            <a class="nav-link text-white" href="/admin/article"><i class="fas fa-newspaper me-2"></i>Article</a><hr class="bg-secondary">
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#"></a><hr class="bg-secondary">

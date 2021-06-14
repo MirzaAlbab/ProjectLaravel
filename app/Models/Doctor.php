@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Doctor extends Model
+class Doctor extends Authenticatable
 {
-    use HasFactory;
-    protected $fillable = ['NAMA','JENIS_KELAMIN','EMAIL','NO_TELP','SPESIALISASI','PASSWORD'];
-    public $timestamps = false;
-    protected $primaryKey = 'ID_DOKTER';
+    use HasFactory, Notifiable;
+    protected $guard = 'doctor';
+    protected $fillable = ['nama','gender','email','telp','spesialisasi','password'];
     protected $table = 'dokter';
 }

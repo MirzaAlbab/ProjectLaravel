@@ -31,9 +31,9 @@
               <td>{{$doc->nama}}</td>
               <td>{{$doc->gender}}</td>
               <td>{{$doc->spesialisasi}}</td>
-              <td><a href="{{ route('doctor.show',$doc->ID_DOKTER) }}" class="btn btn-info">Detail</a></td>
-              <td><a href="{{ route('doctor.edit',$doc->ID_DOKTER) }}" class="btn  btn-sm bg-success" ><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td></a>
-              <form action="{{ route('doctor.destroy',$doc->ID_DOKTER) }}" method="post">
+              <td><a href="{{ route('doctor.show',$doc->id) }}" class="btn btn-info">Detail</a></td>
+              <td><a href="{{ route('doctor.edit',$doc->id) }}" class="btn  btn-sm bg-success" ><i class="fas fa-edit bg-success p-2 text-white rounded"></i></td></a>
+              <form action="{{ route('doctor.destroy',$doc->id) }}" method="post">
               @csrf
               @method('delete')
               <td><button type="submit" class="btn btn-sm bg-danger"><i class="fas fa-trash-alt p-2 text-white rounded"></i></button></td>

@@ -28,6 +28,25 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col">
+                    <label for="gender" class="form-label">Gender</label>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+            <div class="col">
+                <input class="form-check-input" type="radio" name="gender" id="Laki-Laki" value="M">
+                <label class="form-check-label" for="Laki-Laki">
+                Laki-Laki
+                </label>
+            </div>
+            <div class="col">
+                <input class="form-check-input" type="radio" name="gender" id="Wanita" value="F" >
+                <label class="form-check-label" for="Wanita">
+                Wanita
+                </label>
+            </div>
+        </div>
+            <div class="row justify-content-center">
+                <div class="col">
                     <label for="E-mail" class="form-label">E-mail</label>
                     <input type="email" id="E-mail" class="form-control form-control-sm @error('email') is-invalid @enderror" placeholder="E-mail" name="email" value="{{old('email')}}">
                 </div>
@@ -42,25 +61,7 @@
                     <input type="text" id="Alamat" class="form-control form-control-sm" placeholder="Alamat" name="alamat" value="{{old('alamat')}}">
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col">
-                    <label for="gender" class="form-label">Gender</label>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col">
-                    <input class="form-check-input @error('gender') is-invalid @enderror" type="radio"  id="Laki-Laki" name="gender" value="M">
-                    <label class="form-check-label" for="Laki-Laki">
-                    Laki-Laki
-                    </label>
-                </div>
-                <div class="col">
-                    <input class="form-check-input @error('gender') is-invalid @enderror" type="radio"  id="Wanita" name="gender" value="F">
-                    <label class="form-check-label" for="Wanita">
-                    Wanita
-                    </label>
-                </div>
-            </div>
+            
             <div class="row justify-content-center">
                 <div class="col">
                     <label for="password" class="form-label">Password</label>

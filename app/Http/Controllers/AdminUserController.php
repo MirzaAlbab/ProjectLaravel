@@ -40,7 +40,7 @@ class AdminUserController extends Controller
             'email' => 'required',
             'tanggal_lahir' => 'required',
             'password' => 'required',
-            'confirmpassword' => 'required',
+            'password_confirmation' => 'required',
             'alamat' => 'required',
             'telp' => 'required',
             'gender' => 'required',
@@ -48,10 +48,10 @@ class AdminUserController extends Controller
         $User = new User;
         $User->nama = $request->input('nama');
         $User->tanggal_lahir = $request->input('tanggal_lahir');
+        $User->gender = $request->input('gender');
         $User->email = $request->input('email');
         $User->telp = $request->input('telp');
         $User->alamat = $request->input('alamat');
-        $User->gender = $request->input('gender');
         $User->password = bcrypt($request->input('password'));
         $User->save();
         return redirect('/user')->with('status', 'Data User Berhasil Ditambahkan');
@@ -90,7 +90,7 @@ class AdminUserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        User::where('id_pasien', $user->id)
+        User::where('id', $user->id)
                 ->update([
                     'nama' => $request->nama,
                     'tanggal_lahir' => $request->tanggal_lahir,

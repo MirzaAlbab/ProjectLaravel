@@ -10,7 +10,7 @@
 				<h5>Id</h5>            
 			</div>
 			<div class="col-sm-5">
-			 	: {{$doctor->id_dokter}}
+			 	: {{$doctor->id}}
 			</div>
 		</div>
 		<div class="row">
@@ -23,10 +23,10 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-2">
-				<h5>gender</h5>            
+				<h5>Gender</h5>            
 			</div>
 			<div class="col-sm-5">
-            : {{$doctor->jenis_kelamin}}
+            : {{$doctor->gender}}
 			</div>
 		</div>
 		<div class="row">
@@ -54,6 +54,6 @@
 			</div>
 		</div>
         
-	<a href="/doctor" class="btn btn-secondary my-3">Kembali</a>
+	<a href="/admin/doctor" class="btn btn-secondary my-3">Kembali</a>
     </div>
 @endsection

@@ -10,7 +10,7 @@
 				<h5>Id</h5>            
 			</div>
 			<div class="col-sm-5">
-			 	: {{$user->id_pasien}}
+			 	: {{$user->id}}
 			</div>
 		</div>
 		<div class="row">
@@ -62,6 +62,6 @@
 			</div>
 		</div>
         
-	<a href="/user" class="btn btn-secondary my-3">Kembali</a>
+	<a href="/admin/user" class="btn btn-secondary my-3">Kembali</a>
     </div>
 @endsection

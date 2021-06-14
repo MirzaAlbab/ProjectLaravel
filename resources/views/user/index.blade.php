@@ -24,13 +24,6 @@
         	</div>
         </div>
         
-        <div class="row mt-2">
-          <div class="col">
-            <a href="/admin" class="btn layanan">Admin</a>
-
-          </div>
-        </div>
-        
       </div>
       
     </div>

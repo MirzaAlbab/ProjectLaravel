@@ -41,11 +41,11 @@ class AdminDoctorController extends Controller
             'password' => 'required',
             'password_confirmation' => 'required',
             'telp' => 'required',
-            'jenis_kelamin' => 'required',
+            'gender' => 'required',
         ]);
         $Doctor = new Doctor;
         $Doctor->nama = $request->input('nama');
-        $Doctor->jenis_kelamin = $request->input('gender');
+        $Doctor->gender = $request->input('gender');
         $Doctor->email = $request->input('email');
         $Doctor->telp = $request->input('telp');
         $Doctor->spesialisasi = $request->input('spesialisasi');
@@ -87,7 +87,7 @@ class AdminDoctorController extends Controller
      */
     public function update(Request $request, Doctor $doctor)
     {
-        Doctor::where('id_dokter', $doctor->id)
+        Doctor::where('id', $doctor->id)
                 ->update([
                     'nama' => $request->nama,
                     'email' => $request->email,

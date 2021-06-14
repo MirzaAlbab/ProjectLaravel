@@ -59,7 +59,7 @@
 				<input type="password" id="password_confirmation" class="form-control form-control-sm" placeholder="Ketik Ulang Password" name="password_confirmation">
 			</div>
 		</div>
-	<a href="/doctor" class="close btn btn-secondary my-3">Kembali</a>
+	<a href="/admin/doctor" class="close btn btn-secondary my-3">Kembali</a>
 	<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 </div>

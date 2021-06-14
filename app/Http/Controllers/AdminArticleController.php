@@ -13,7 +13,8 @@ class AdminArticleController extends Controller
      */
     public function index()
     {
-        return view('admin.article');
+        $Article = \App\Models\Article::all();
+        return view('admin.article.article');
        
     }
 

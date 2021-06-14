@@ -46,6 +46,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'doctor' => [
+            'driver' => 'session',
+            'provider' => 'dokter',
+        ],
+
+        'api-doctor' => [
+            'driver' => 'token',
+            'provider' => 'dokter',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +79,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'dokter' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Doctor::class,
         ],
 
         // 'users' => [

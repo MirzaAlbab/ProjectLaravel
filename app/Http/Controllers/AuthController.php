@@ -91,6 +91,7 @@ class AuthController extends Controller
             'password' => 'required|confirmed',
         ]);
         
+        
         $User = new User;
         $User->nama = $request->input('nama');
         $User->tanggal_lahir = $request->input('tanggal_lahir');

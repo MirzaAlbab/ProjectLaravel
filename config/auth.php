@@ -16,7 +16,9 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
+
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -48,13 +50,7 @@ return [
         ],
         'doctor' => [
             'driver' => 'session',
-            'provider' => 'dokter',
-        ],
-
-        'api-doctor' => [
-            'driver' => 'token',
-            'provider' => 'dokter',
-            'hash' => false,
+            'provider' => 'doctors',
         ],
     ],
 
@@ -80,7 +76,7 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'dokter' => [
+        'doctors' => [
             'driver' => 'eloquent',
             'model' => App\Models\Doctor::class,
         ],
